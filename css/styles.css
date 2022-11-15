@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Poor+Story&family=Source+Sans+Pro&family=Space+Mono&display=swap');
+
 /* START Global Selectors */
 .navBgColor {
     background: #000324;
@@ -12,7 +14,20 @@ body::before {
     display: block;
     content: '';
     height: 120px;
-  }
+}
+
+a,
+h1,
+h6 {
+    color: #E5FEFF;
+    font-family: 'Dosis', sans-serif;
+}
+
+p, h2, h5 {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+}
+
 
 /* END Global Selectors */
 
@@ -30,16 +45,29 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 134px;
+    padding-left: 250px;
+    /* padding: 487.5px; */
+    /* margin: 0;
+    padding: 0; */
 }
 
-.header-box{
+.header-box {
     display: flex;
     justify-content: center;
     width: 945px;
     height: 232px;
-    background-color: #00032481;
+    background-color: #000324c8;
+}
+
+.header-box-items {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
 }
 
 .large-header-text {
@@ -60,4 +88,71 @@ nav {
     margin-bottom: 6px;
 }
 
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.relaxedHam {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    max-height: 416px;
+    margin: auto;
+    padding: 0em;
+}
+
+.card {
+    border: none;
+    max-width: 89%;
+    height: 500px;
+}
+
+.awards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-content {
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.room-content {
+    background-image: url('../images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.center-list {
+    padding-left: 1rem;
+    font-size: x-small;
+}
+
 /* END custom selectors */
+
+@media (max-width: 540px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav-link {
+        display: none;
+    }
+}
