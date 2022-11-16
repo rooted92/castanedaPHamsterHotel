@@ -145,6 +145,11 @@ nav {
     font-size: x-small;
 }
 
+.beach-rm-btn {
+    background-color: #004CC7;
+    color: white;
+}
+
 /* END custom selectors */
 
 @media (max-width: 540px) {
