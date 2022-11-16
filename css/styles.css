@@ -33,6 +33,11 @@ p, h2, h5 {
 
 /* START custom selectors */
 
+.black-text {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+}
+
 .res-link {
     border: white solid 1px;
     padding: 1px 3px 1px 3px;
@@ -124,6 +129,7 @@ nav {
 .overview-content {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 4rem;
     min-height: 30rem;
     width: auto;
@@ -142,9 +148,16 @@ nav {
     font-size: x-small;
 }
 
-.beach-rm-btn {
+.rooms-btn {
+    display: flex;
+    justify-content: baseline;
     background-color: #004CC7;
     color: white;
+}
+
+.packages-img {
+    width: 10rem;
+    height: auto, 0;
 }
 
 /* END custom selectors */
