@@ -40,33 +40,27 @@ p, h2, h5 {
 
 .header-bg-box {
     background-image: url('../images/header.jpg');
-    width: 100%;
-    height: 500px;
+    width: auto, 0;
+    min-height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 134px;
-    padding-left: 250px;
-    /* padding: 487.5px; */
-    /* margin: 0;
-    padding: 0; */
 }
 
 .header-box {
     display: flex;
     justify-content: center;
-    width: 945px;
-    height: 232px;
+    width: 45rem;
+    min-height: 10px;
     background-color: #000324c8;
+    margin: 7rem;
 }
 
 .header-box-items {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
 }
 
@@ -121,16 +115,19 @@ nav {
     height: 500px;
 }
 
-.awards {
-    display: flex;
-    justify-content: space-between;
+.award-images {
+    max-width: 10rem;
+    height: auto;
+    padding: 1rem;
 }
 
 .overview-content {
-    /* height: 500px; */
     display: flex;
     justify-content: center;
     padding: 4rem;
+    min-height: 30rem;
+    width: auto;
+
 }
 
 .room-content {
