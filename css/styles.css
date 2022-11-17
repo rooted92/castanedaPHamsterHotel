@@ -106,7 +106,7 @@ nav {
     max-width: 23rem;
     max-height: 26rem;
     margin: auto;
-    /* padding: 0em; */
+    object-fit: cover;
 }
 
 .card {
@@ -214,7 +214,8 @@ nav {
 .amenities-container {
     display: flex;
     justify-content: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    gap: 9rem;
     min-height: 20rem;
     margin: 3rem;
     padding: 2rem;
@@ -223,6 +224,26 @@ nav {
 .valet-icon {
     width: auto;
     height: 104px;
+}
+
+.reserve-img {
+    width: 71rem;
+    height: 25.8rem;
+    object-fit: cover;
+}
+
+.reserve-bx {
+    max-width: 1137px;
+    min-height: 207px;
+    background-color: #000324;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.reserve-btn {
+    background-color: #004CC7;
+    border: none;
 }
 
 /* END custom selectors */
