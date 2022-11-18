@@ -472,16 +472,16 @@ Peer Review by;
     </div>
     <!-- END sm screen amenities section -->
     <!-- Reserve A Room section -->
-
+    <a id="reserve" class="res-anchor"></a>
     <div class="container-fluid d-none d-lg-block d-inline justify-content-center p-2 pb-5">
-        <div class="container-fluid reserve-bx source-sans white-text">
+        <div class="container-fluid reserve-bx source-sans white-text pt-5">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2 class="dosis">Rerserve a Room</h2>
+                    <h2 class="dosis">Reserve a Room</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-1"></div>
+            <div class="row add-gap d-flex justify-content-center">
+                <div class="col-1 d-none"></div>
                 <div class="col-2">
                     <label class="d-flex" for="check-in">Check In</label>
                     <input type="date" name="check-in" id="check-in" />
@@ -492,7 +492,7 @@ Peer Review by;
                 </div>
                 <div class="col-2">
                     <label class="d-flex" for="guests">Number of Guests</label>
-                    <input type="number" name="guests" id="guests" min="1" placeholder="2" />
+                    <input class="num-input-width" type="number" name="guests" id="guests" min="1" placeholder="2" />
                 </div>
                 <div class="col-2">
                     <label class="d-flex" for="room-type">Room Type</label>
@@ -506,7 +506,7 @@ Peer Review by;
                     <button type="button" class="reserve-btn mt-4 fw-bold btn-width">Check
                         Availability</button>
                 </div>
-                <div class="col-1"></div>
+                <div class="col-1 d-none"></div>
             </div>
         </div>
         <div class="row">
@@ -515,56 +515,12 @@ Peer Review by;
             </div>
         </div>
     </div>
-
-
-    <!-- <a id="reserve" class="res-anchor"></a>
-    <div class="container-fluid d-flex justify-content-center pb-5 white-text source-sans text-center d-none d-lg-block">
-        <div class="row">
-            <div class="col-12">
-                <div class="reserve-bx d-grid align-content-center">
-                    <h2 class="dosis">Rerserve a Room</h2>
-                    <div class="input-bx d-flex">
-                        <div class="inputs">
-                            <label class="d-flex" for="check-in">Check In</label>
-                            <input type="date" name="check-in" id="check-in" />
-                        </div>
-                        <div class="inputs">
-                            <label class="d-flex" for="check-out">Check Out</label>
-                            <input type="date" name="check-out" id="check-out" />
-                        </div>
-                        <div class="inputs">
-                            <label class="d-flex" for="guests">Number of Guests</label>
-                            <input type="number" name="guests" id="guests" min="1" placeholder="2" />
-                        </div>
-                        <div class="inputs">
-                            <label class="d-flex" for="room-type">Room Type</label>
-                            <select name="room-type" id="room-type">
-                                <option value="queen-room">Queen Room</option>
-                                <option value="king-Room">King Room</option>
-                                <option value="beach-Room">Beach Room</option>
-                            </select>
-                        </div>
-                        <div class="inputs">
-                            <button type="button" class="reserve-btn mt-4 fw-bold btn-width">Check
-                                Availability</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <img src="../images/hamsterreserve.jpg" class="reserve-img" alt="">
-            </div>
-        </div>
-    </div> -->
     <!-- START sm screen reserve a room section -->
     <div class="container-fluid d-block d-lg-none d-inline justify-content-center p-2">
         <div class="container-fluid sm-screen-reserve-bx white-text source-sans">
             <div class="row">
                 <div class="col-12 text-center pt-3">
-                    <h2 class="dosis">Rerserve a Room</h2>
+                    <h2 class="dosis">Reserve a Room</h2>
                 </div>
             </div>
             <div class="row text-center">
@@ -602,7 +558,7 @@ Peer Review by;
                 </div>
             </div>
         </div>
-        <img src="../images/hamsterreserve.jpg" class="reserve-img" alt="">
+        <img src="../images/hamsterreserve.jpg" class="reserve-img-sm" alt="hamsters eating seeds">
     </div>
     <!-- END sm screen reserve a romm section -->
     <!-- Contact section -->

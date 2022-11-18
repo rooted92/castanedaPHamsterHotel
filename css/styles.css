@@ -298,11 +298,25 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
 /* END amenities selectors/classes */
 
 /* START reserve a room selectors/classes */
+.num-input-width {
+    max-width: 176px;
+}
+
+.add-gap {
+    gap: .5rem;
+}
 
 .reserve-img {
     /* display: flex;
     justify-content: center; */
-    min-width: 71rem;
+    width: 71rem;
+    height: 25.8rem;
+    object-fit: cover;
+    object-position: 40% 70%;
+}
+
+.reserve-img-sm {
+    width: 71rem;
     height: 25.8rem;
     object-fit: cover;
     object-position: 40% 70%;
@@ -312,6 +326,7 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
     max-width: 71rem;
     min-height: 207px;
     background-color: #000324;
+    gap: 1rem;
 }
 
 .sm-screen-reserve-bx {
