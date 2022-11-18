@@ -19,23 +19,17 @@ Peer Review by;
 </head>
 
 <body>
-    <header id="top">
+    <!-- START Navbar -->
+    <header>
         <div class="container-fluid white-text dosis">
-            <!-- START Navbar -->
-
-            <!-- Created a button that will be the hambuger when the screen reaches a specific breaking point -->
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-    <span class="navbar-toggler-icon"></span>
-</button> -->
-            <!-- the ms-auto will align the ul to the right in navbar -->
-
-            <nav class="navbar-expand-lg navBgColor py-0 fixed-top">
-                <a href="#" class="toggle-button d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+            <nav class="navbar-expand-lg  navBgColor py-0 fixed-top">
+                <a href="#" class="toggle-button d-sm-block d-xl-none">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </a>
-                <ul class="nav justify-content-center align-items-sm-end align-items-md-end align-items-lg-end pt-lg-3">
+                <ul
+                    class="nav d-flex justify-content-center align-items-sm-end align-items-md-end align-items-lg-end pt-lg-3">
                     <li class="nav-item">
                         <a class="nav-link text-white res-link" href="#overview">Overview</a>
                     </li>
@@ -64,25 +58,32 @@ Peer Review by;
         </div>
         <!-- END Navbar -->
         <!-- Header Image -->
-        <section class="header-bg-box container-fluid white-text dosis">
-            <div class="header-box p-md-5 p-sm-5">
-                <div class="header-box-items text-md-center text-sm-center">
-                    <h1>Run on the wheel of luxury</h1>
-                    <h6 class="source-sans">Explore everything the beach has to offer in our relaxing resort.
-                    </h6>
+        <a id="top" class="h-anchor"></a>
+        <div class="d-md-block d-none">
+            <section class="header-bg-box container-fluid white-text dosis">
+                <div class="header-box p-md-5 p-sm-5">
+                    <div class="header-box-items text-md-center text-sm-center">
+                        <h1>Run on the wheel of luxury</h1>
+                        <h6 class="source-sans">Explore everything the beach has to offer in our relaxing resort.
+                        </h6>
+                    </div>
                 </div>
+            </section>
+        </div>
+            <div class="container-fluid d-md-none d-sm-block">
+                <img src="../images/header.jpg" alt="">
             </div>
-        </section>
     </header>
     <!-- Overview Content -->
     <!-- TODO fix image using object fit, fill? or cover? -->
-    <div class="row py-5 align-items-center justify-content-center p-1 source-sans black-text overview-height"
-        id="overview">
-        <div class="overview-content">
-            <div class="col-lg-3 col-md-4 col-sm-2 ov-col-one">
-                <img class="relaxedHam" src="../images/hamsterhomejpg.jpg" alt="hamster relaxing on pool chair">
+    <a id="overview" class="ov-anchor"></a>
+    <div class="container-fluid row py-5 align-items-center justify-content-center source-sans black-text">
+        <div class="overview-content flex-column flex-md-row align-items-center align-content-center">
+            <div class="col-md-6 col-12 ov-col-one">
+                <img class="relaxedHam" src="../images/hamsterhomejpg.jpg" alt="hamster relaxing on pool chair"
+                    width="369" height="416">
             </div>
-            <div class="col-lg-6 col-md-4 col-sm-6 ov-col-two">
+            <div class="col-md-6 col-12 ov-col-two">
                 <h2 class="dosis">Welcome to a hamster's paradise</h2>
                 <p>Nestled in the heart of Cavia California, La Petite Maison is a luxury hotel designed for the
                     small mammal with extravagance in mind. Escape to the warm comforts of stunning rooms, a
@@ -91,25 +92,43 @@ Peer Review by;
                     accommodations along with our unmatched luxury. Discover the satisfaction of indulging in our
                     quality rooms, and thank you for choosing La Petite Maison.</p>
                 <div class="row award-images-container">
-                    <div
-                        class="col-lg-4 col-md-4 col-sm-4 column d-grid align-content-center justify-content-start p-0">
+                    <div class="col-lg-4 d-xl-block d-none d-grid align-content-center justify-content-start p-0">
                         <img class="award-images" src="../images/awardfinest.png" alt="award for finest quality">
                     </div>
-                    <div
-                        class="col-lg-4 col-md-4 col-sm-4 column  d-grid align-content-center justify-content-center p-0">
+                    <div class="col-lg-4 d-xl-block d-none d-grid align-content-center justify-content-center p-0">
                         <img class="award-images" src="../images/awardsatisfaction.png"
                             alt="statisfaction guaranteed award">
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 column d-grid align-content-center justify-content-end p-0">
+                    <div class="col-lg-4 d-xl-block d-none d-grid align-content-center justify-content-end p-0">
                         <img class="award-images" src="../images/awardgenuine.png" alt="genuine award">
+                    </div>
+                </div>
+                <!-- START carousel -->
+                <!-- TODO switch to a crossfade!! (bootstrap) -->
+                <div id="awardsCarousel" class="carousel slide d-block d-xl-none" data-bs-ride="carousel">
+                    <div class="carousel-inner d-flex justify-content-evenly">
+                        <div class="carousel-item active w-100">
+                            <img src="../images/awardfinest.png"
+                                class="d-block w-100 carousel-award-images d-flex justify-content-center"
+                                alt="award for finest quality">
+                        </div>
+                        <div class="carousel-item w-100">
+                            <img src="../images/awardsatisfaction.png" class="d-block w-100 carousel-award-images"
+                                alt="statisfaction guaranteed award">
+                        </div>
+                        <div class="carousel-item w-100">
+                            <img src="../images/awardgenuine.png" class="d-block w-100 carousel-award-images"
+                                alt="genuine award">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Rooms section -->
-    <div class="container-fluid pb-5 room-bg" id="rooms">
-        <div class="container room-card-row pb-5 pt-4 px-0">
+    <a id="rooms" class="rms-anchor"></a>
+    <div class="container-fluid pb-5 room-bg">
+        <div class="container-fluid pb-5 pt-4">
             <div class="row">
                 <div class="col-12 text-center pb-1">
                     <h2 class="white-text dosis">Our Rooms</h2>
@@ -166,7 +185,8 @@ Peer Review by;
         </div>
     </div>
     <!-- Packages section -->
-    <div class="container-fluid black-text source-sans" id="packages">
+    <a id="packages" class="p-anchor"></a>
+    <div class="container-fluid black-text source-sans">
         <h2 class="black-text text-center pt-5 pb-1 black-text dosis">Packages</h2>
         <div class="row">
             <div class="col-xl-2 col-lg-2 col-md-1"></div>
@@ -220,11 +240,11 @@ Peer Review by;
         </div>
     </div>
     <!-- Amenities section -->
+    <a id="amenities" class="a-anchor"></a>
     <div class="container-fluid white-text source-sans amenities-bg text-center pt-5" id="amenities">
         <h2 class="dosis">Amenities</h2>
         <h6>Here at La Petite Maison, we invite you to enjoy our services in hopes that you have the most relaxing stay
             we can provide.</h6>
-
         <div class="amenities-container">
             <div class="amenities-icons d-grid align-content-around">
                 <div class="amenities-sm-box">
@@ -253,46 +273,71 @@ Peer Review by;
         </div>
     </div>
     <!-- Reserve A Room section -->
-    <!-- TODO fix h2, needs to be inside reserve box above inputs and btn -->
-    <div class="container-fluid d-grid justify-content-center pb-5 white-text source-sans text-center" id="reserve">
-        <div class="reserve-bx">
-            <div class="row">
-                <h2 class="dosis">Rerserve a Room</h2>
-            </div>
-            <div class="col-1">
+    <a id="reserve" class="res-anchor"></a>
+    <div class="container-fluid d-grid justify-content-center pb-5 white-text source-sans text-center">
 
-            </div>
-            <div class="col-2 pt-5">
-                <label class="d-flex" for="check-in">Check In</label>
-                <input type="text" name="check-in" id="check-in" />
-            </div>
-            <div class="col-2 pt-5">
-                <label class="d-flex" for="check-out">Check Out</label>
-                <input type="text" name="check-out" id="check-out" />
-            </div>
-            <div class="col-2 pt-5">
-                <label class="d-flex" for="guests">Number of Guests</label>
-                <input type="text" name="guests" id="guests" />
-            </div>
-            <div class="col-2 pt-5">
-                <label class="d-flex" for="room-type">Room Type</label>
-                <input type="text" name="room-type" id="room-type" />
-            </div>
-            <div class="col-2 pt-5 align-content-between">
-                <button type="button" class="reserve-btn d-flex mt-4 white-text">Check Availability</button>
-            </div>
-            <div class="col-1">
-
+        <div class="reserve-bx d-grid align-content-center">
+            <h2 class="dosis">Rerserve a Room</h2>
+            <div class="input-bx d-flex">
+                <div class="inputs">
+                    <label class="d-flex" for="check-in">Check In</label>
+                    <input type="date" name="check-in" id="check-in" />
+                </div>
+                <div class="inputs">
+                    <label class="d-flex" for="check-out">Check Out</label>
+                    <input type="date" name="check-out" id="check-out" />
+                </div>
+                <div class="inputs">
+                    <label class="d-flex" for="guests">Number of Guests</label>
+                    <input type="number" name="guests" id="guests" min="1" placeholder="2" />
+                </div>
+                <div class="inputs">
+                    <label class="d-flex" for="room-type">Room Type</label>
+                    <select name="room-type" id="room-type">
+                        <option value="queen-room">Queen Room</option>
+                        <option value="king-Room">King Room</option>
+                        <option value="beach-Room">Beach Room</option>
+                    </select>
+                </div>
+                <div class="inputs">
+                    <button type="button" class="reserve-btn mt-4 white-text fw-bold btn-width">Check
+                        Availability</button>
+                </div>
             </div>
         </div>
         <img src="../images/hamsterreserve.jpg" class="reserve-img" alt="">
     </div>
     <!-- Contact section -->
-    <!-- TODO footer -->
-
+    <a id="contact" class="c-anchor"></a>
+    <footer class="white-text source-sans">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center pt-5">
+                <a href="#" class="d-flex justify-content-center"><img src="../images/Logo.png" class="ft-logo-img"
+                        alt="hotel logo"></a>
+            </div>
+            <div class="row d-flex justify-content-center pt-4">
+                123 Sunflower Seed Rd., Cavia, California 95205
+            </div>
+            <div class="row d-flex justify-content-center pt-4">
+                ©LA PETITE MAISON HOTELS LIMITED 1939-2018. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+<!-- Created a button that will be the hambuger when the screen reaches a specific breaking point -->
+<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <span class="navbar-toggler-icon"></span>
+</button> -->
+<!-- the ms-auto will align the ul to the right in navbar -->
+<!-- Created a button that will be the hambuger when the screen reaches a specific breaking point -->
+<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <span class="navbar-toggler-icon"></span>
+</button> -->
+<!-- the ms-auto will align the ul to the right in navbar -->

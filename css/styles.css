@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Poor+Story&family=Source+Sans+Pro&family=Space+Mono&display=swap');
 
 /* START Global Selectors */
+body {
+    margin: 0;
+}
+
 .navBgColor {
     background: #000324;
 }
@@ -9,11 +13,11 @@
     display: flex;
     justify-content: baseline;
 }
-
+/* this helps the body content appear right below the fixed navbar instead of behind it */
 body::before {
     display: block;
     content: '';
-    height: 120px;
+    height: 7.5rem;
 }
 
 /* END Global Selectors */
@@ -68,10 +72,10 @@ body::before {
     flex-direction: column;
 }
 
-
+/* 
 nav {
-    height: 120px;
-}
+    height: 7.5rem;
+} */
 
 .logo-img {
     max-width: 9rem;
@@ -103,11 +107,11 @@ nav {
 .relaxedHam {
     display: flex;
     justify-content: center;
-    max-width: 23rem;
-    max-height: 26rem;
+    max-width: 100%;
+    height: auto;
     margin: auto;
     object-fit: cover;
-}
+    object-position: 70% 40%;}
 
 .card {
     border-radius: 0;
@@ -134,9 +138,10 @@ nav {
     padding: .5rem;
 }
 
-.overview-height {
-    display: flex;
-    min-height: 30rem;
+.carousel-award-images {
+    max-width: 9rem;
+    height: auto;
+    padding: 1rem;
 }
 
 .overview-content {
@@ -144,7 +149,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     min-height: 20rem;
-    width: auto;
+    width: 100%;
 }
 
 .ov-col-one {
@@ -163,11 +168,6 @@ nav {
     background-image: url('../images/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.room-card-row {
-    min-width: 60rem;
-    height: auto;
 }
 
 .center-list {
@@ -189,7 +189,7 @@ nav {
     margin: auto, 0;
     padding: 0%;
     object-fit: cover;
-    object-position: -1.5rem;
+    object-position: -1rem;
 }
 
 .rooms-cards {
@@ -201,14 +201,12 @@ nav {
     color: #1F51A8;
 }
 
-.col-height {
-    /* width: 30%; */
-}
 
 .amenities-bg {
     background-image: url('../images/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .amenities-container {
@@ -218,7 +216,7 @@ nav {
     gap: 9rem;
     min-height: 20rem;
     margin: 3rem;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 .valet-icon {
@@ -230,10 +228,11 @@ nav {
     width: 71rem;
     height: 25.8rem;
     object-fit: cover;
+    object-position: 40% 70%;
 }
 
 .reserve-bx {
-    max-width: 1137px;
+    max-width: 71rem;
     min-height: 207px;
     background-color: #000324;
     display: flex;
@@ -243,8 +242,57 @@ nav {
 
 .reserve-btn {
     background-color: #004CC7;
-    border: none;
+    border: #000DC7 solid 1px;
+    min-height: 2.375rem;
+    width: 11.8rem;
+    font-size: 20px;
 }
+
+.input-bx {
+    gap: 1rem;
+}
+
+.btn-width {
+    max-width: 11rem;
+}
+
+input {
+    min-width: 11rem;
+    min-height: 2.375rem;
+}
+
+select {
+    min-width: 11rem;
+    min-height: 2.375rem;
+}
+
+footer {
+    background-color: #000324;
+    width: 100%;
+    min-height: 18.7rem;
+}
+
+.ft-logo-img {
+    max-width: 8.9rem;
+    max-height: auto;
+}
+/* I created 'invisible' a tags with their respective classes below that have the same height as the navbar so the navbar wont hide the top of the content, since the navbar is fixed. */
+a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c-anchor {
+    display: block;
+    position: relative;
+    top: -7.5rem;
+    visibility: hidden;
+}
+
+/* .main-reserve-bx {
+    padding-left: 13rem;
+    padding-bottom: 4rem;
+} */
+
+/* .input-container {
+    width: 71rem;
+    gap: 1rem;
+} */
 
 /* END custom selectors */
 
