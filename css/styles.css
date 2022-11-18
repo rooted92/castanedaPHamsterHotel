@@ -56,6 +56,7 @@ section {
 }
 
 .nav {
+    min-width: auto;
     height: 7.5rem;
 }
 
@@ -107,7 +108,7 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
 
 .header-bg-box {
     background-image: url('../images/header.jpg');
-    width: auto, 0;
+    min-width: auto;
     min-height: 20rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -261,6 +262,10 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
     font-size: 20px;
 }
 
+.sm-screen-cards {
+    
+}
+
 /* START amenities selectors/packages */
 
 .amenities-bg {
@@ -285,12 +290,19 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
     max-height: 104px;
 }
 
+.amenities-img {
+    display: inline;
+    justify-content: center;
+}
+
 /* END amenities selectors/classes */
 
 /* START reserve a room selectors/classes */
 
 .reserve-img {
-    width: 71rem;
+    /* display: flex;
+    justify-content: center; */
+    min-width: 71rem;
     height: 25.8rem;
     object-fit: cover;
     object-position: 40% 70%;
@@ -300,9 +312,12 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
     max-width: 71rem;
     min-height: 207px;
     background-color: #000324;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+}
+
+.sm-screen-reserve-bx {
+    max-width: 71rem;
+    min-height: 207px;
+    background-color: #000324;
 }
 
 .reserve-btn {
@@ -330,6 +345,10 @@ input {
 select {
     min-width: 11rem;
     min-height: 2.375rem;
+}
+
+.left-margin {
+    margin-left: 12.5rem;
 }
 
 /* END reserve a room selectors/classes */
@@ -370,13 +389,31 @@ footer {
         content: '';
         height: 7.5rem;
     }
+
+    
+    /* .carousel {
+       
+    } */
+}
+
+@media (max-width: 575px) {
+    .relaxedHam {
+       display: none;
+    }
+
 }
 
 @media (max-width: 768px) {
-    body::before {
+    /* body::before {
         display: inline;
         content: '';
         height: 7.5rem;
+    } */
+
+    .overview-content {
+        display: flex;
+        align-items: center;
+        margin-left: 4rem;
     }
 }
 
