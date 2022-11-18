@@ -21,15 +21,40 @@ Peer Review by;
 <body>
     <!-- START Navbar -->
     <header>
-        <div class="container-fluid white-text dosis">
-            <nav class="navbar-expand-lg  navBgColor py-0 fixed-top">
-                <a href="#" class="toggle-button d-sm-block d-xl-none">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+        <!-- START small screens dropdown nav -->
+        <nav class="navbar navbar-expand-lg navbar-dark navBgColor d-block d-md-none white-text source-sans">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#top">
+                    <img class="logo-img" src="../images/Logo.png" alt="">
                 </a>
-                <ul
-                    class="nav d-flex justify-content-center align-items-sm-end align-items-md-end align-items-lg-end pt-lg-3">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <!-- <a class="nav-link dropdown-toggle white-text source-sans" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            </a> -->
+                            <ul class="dropdown-menu navBgColor d-sm-flex d-grid ">
+                                <li><a class="dropdown-item" href="#overview">Overview</a></li>
+                                <li><a class="dropdown-item" href="#rooms">Rooms</a></li>
+                                <li><a class="dropdown-item" href="#packages">Packages</a></li>
+                                <li><a class="dropdown-item" href="#amenities">Amenities</a></li>
+                                <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                                <li><a class="dropdown-item" href="#reserve">Reserve</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END dropdown nav -->
+        <div class="container-fluid white-text dosis hide-lg-nav">
+            <nav class=" navBgColor py-0 fixed-top d-none d-md-block">
+                <ul class="nav d-flex justify-content-center align-items-sm-end pt-lg-3 ">
                     <li class="nav-item">
                         <a class="nav-link text-white res-link" href="#overview">Overview</a>
                     </li>
@@ -50,39 +75,40 @@ Peer Review by;
                     <li class="nav-item">
                         <a class="nav-link text-white res-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item resBtn">
+                    <li class="nav-item">
                         <a class="nav-link text-white res-link" href="#reserve">Reserve</a>
                     </li>
                 </ul>
             </nav>
+
         </div>
         <!-- END Navbar -->
         <!-- Header Image -->
         <a id="top" class="h-anchor"></a>
-        <div class="d-md-block d-none">
-            <section class="header-bg-box container-fluid white-text dosis">
-                <div class="header-box p-md-5 p-sm-5">
-                    <div class="header-box-items text-md-center text-sm-center">
-                        <h1>Run on the wheel of luxury</h1>
-                        <h6 class="source-sans">Explore everything the beach has to offer in our relaxing resort.
-                        </h6>
-                    </div>
+        <!-- <div class="d-lg-block d-none"> -->
+        <section class="header-bg-box white-text dosis">
+            <div class="header-box p-md-5 p-sm-5">
+                <div class="header-box-items text-md-center text-sm-center">
+                    <h1>Run on the wheel of luxury</h1>
+                    <h6 class="source-sans">Explore everything the beach has to offer in our relaxing resort.
+                    </h6>
                 </div>
-            </section>
-        </div>
-            <div class="container-fluid d-md-none d-sm-block">
-                <img src="../images/header.jpg" alt="">
             </div>
+        </section>
+        <!-- </div> -->
+        <!-- medium screens and smaller -->
+
+
     </header>
     <!-- Overview Content -->
     <!-- TODO fix image using object fit, fill? or cover? -->
     <a id="overview" class="ov-anchor"></a>
     <div class="container-fluid row py-5 align-items-center justify-content-center source-sans black-text">
-        <div class="overview-content flex-column flex-md-row align-items-center align-content-center">
-            <div class="col-md-6 col-12 ov-col-one">
-                <img class="relaxedHam" src="../images/hamsterhomejpg.jpg" alt="hamster relaxing on pool chair"
-                    width="369" height="416">
-            </div>
+        <div
+            class="overview-content flex-column flex-lg-row align-items-center align-content-center flex-sm-column-reverse">
+            <!-- <div class="col-md-6 col-12 ov-col-one"> -->
+            <img class="relaxedHam" src="../images/hamsterhomejpg.jpg" alt="hamster relaxing on pool chair">
+            <!-- </div> -->
             <div class="col-md-6 col-12 ov-col-two">
                 <h2 class="dosis">Welcome to a hamster's paradise</h2>
                 <p>Nestled in the heart of Cavia California, La Petite Maison is a luxury hotel designed for the
@@ -103,20 +129,19 @@ Peer Review by;
                         <img class="award-images" src="../images/awardgenuine.png" alt="genuine award">
                     </div>
                 </div>
-                <!-- START carousel -->
-                <!-- TODO switch to a crossfade!! (bootstrap) -->
+                <!-- START overview carousel -->
                 <div id="awardsCarousel" class="carousel slide d-block d-xl-none" data-bs-ride="carousel">
-                    <div class="carousel-inner d-flex justify-content-evenly">
-                        <div class="carousel-item active w-100">
+                    <div class="carousel-inner d-flex justify-content-center">
+                        <div class="carousel-item active w-100" data-bs-interval="4000">
                             <img src="../images/awardfinest.png"
                                 class="d-block w-100 carousel-award-images d-flex justify-content-center"
                                 alt="award for finest quality">
                         </div>
-                        <div class="carousel-item w-100">
+                        <div class="carousel-item w-100" data-bs-interval="4000">
                             <img src="../images/awardsatisfaction.png" class="d-block w-100 carousel-award-images"
                                 alt="statisfaction guaranteed award">
                         </div>
-                        <div class="carousel-item w-100">
+                        <div class="carousel-item w-100" data-bs-interval="4000">
                             <img src="../images/awardgenuine.png" class="d-block w-100 carousel-award-images"
                                 alt="genuine award">
                         </div>
@@ -128,7 +153,8 @@ Peer Review by;
     <!-- Rooms section -->
     <a id="rooms" class="rms-anchor"></a>
     <div class="container-fluid pb-5 room-bg">
-        <div class="container-fluid pb-5 pt-4">
+        <!-- START room cards -->
+        <div class="container-fluid pb-5 pt-4 d-none d-lg-block">
             <div class="row">
                 <div class="col-12 text-center pb-1">
                     <h2 class="white-text dosis">Our Rooms</h2>
@@ -183,7 +209,79 @@ Peer Review by;
                 </div>
             </div>
         </div>
+        <!-- END room cards -->
+        <!-- START rooms carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide d-block d-lg-none p-5" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner d-flex justify-content-evenly">
+                <div class="carousel-item active">
+                    <div class="card h-100">
+                        <img src="../images/room1.jpg" class="card-img-top" alt="queen room with city view">
+                        <div class="card-body d-grid align-content-between">
+                            <h5 class="card-title dosis">Queen Room</h5>
+                            <p class="card-text"><strong>850 SQ FT room with city view</strong></p>
+                            <ul class="center-list">
+                                <li class="p-1">One queen size bed</li>
+                                <li class="p-1">Seed Bar, fireplace and large balcony</li>
+                                <li class="p-1">Small kitchen with a refrigerator and stove</li>
+                            </ul>
+                            <button type="button" class="btn btn-sm rooms-btn">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="../images/room3.jpg" class="card-img-top" alt="picture of king room">
+                        <div class="card-body d-grid align-content-between">
+                            <h5 class="card-title dosis">King Room</h5>
+                            <p class="card-text"><strong>950 SQ FT room with beach view</strong></p>
+                            <ul class="center-list">
+                                <li class="p-1">One king size bed</li>
+                                <li class="p-1">Seed Bar, fireplace and large balcony</li>
+                                <li class="p-1">Small kitchen with a refrigerator and stove</li>
+                            </ul>
+                            <button type="button" class="btn btn-sm rooms-btn">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card h-100">
+                        <img src="../images/room2.jpg" class="card-img-top" alt="picture of beach room">
+                        <div class="card-body d-grid align-content-between">
+                            <h5 class="card-title dosis">Beach Room</h5>
+                            <p><strong>1500 SQ FT Suite with beach view</strong></p>
+                            <ul class="center-list">
+                                <li class="p-1">One California king size bed</li>
+                                <li class="p-1">Second room with fireplace, hot tub, and balcony</li>
+                                <li class="p-1">Seed Bar and coffee station</li>
+                                <li class="p-1">Full kitchen with a refrigerator, stove, and island</li>
+                            </ul>
+                            <button type="button" class="btn btn-sm rooms-btn">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
+    <!-- END rooms carousel -->
+    
     <!-- Packages section -->
     <a id="packages" class="p-anchor"></a>
     <div class="container-fluid black-text source-sans">
@@ -300,7 +398,7 @@ Peer Review by;
                     </select>
                 </div>
                 <div class="inputs">
-                    <button type="button" class="reserve-btn mt-4 white-text fw-bold btn-width">Check
+                    <button type="button" class="reserve-btn mt-4 fw-bold btn-width">Check
                         Availability</button>
                 </div>
             </div>
@@ -327,17 +425,4 @@ Peer Review by;
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
-
-
-<!-- Created a button that will be the hambuger when the screen reaches a specific breaking point -->
-<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-    <span class="navbar-toggler-icon"></span>
-</button> -->
-<!-- the ms-auto will align the ul to the right in navbar -->
-<!-- Created a button that will be the hambuger when the screen reaches a specific breaking point -->
-<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-    <span class="navbar-toggler-icon"></span>
-</button> -->
-<!-- the ms-auto will align the ul to the right in navbar -->

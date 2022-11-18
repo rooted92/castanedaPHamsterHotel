@@ -1,28 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Poor+Story&family=Source+Sans+Pro&family=Space+Mono&display=swap');
 
 /* START Global Selectors */
-body {
+* {
     margin: 0;
+    padding: 0;
 }
 
-.navBgColor {
-    background: #000324;
+html, body {
+    height: 100%;
 }
 
-.nav-link {
-    display: flex;
-    justify-content: baseline;
+img {
+    max-width: 100%;
+    display: block;
 }
+
 /* this helps the body content appear right below the fixed navbar instead of behind it */
 body::before {
     display: block;
     content: '';
     height: 7.5rem;
 }
-
-/* END Global Selectors */
-
-/* START custom selectors */
 
 .black-text {
     color: #1A1B26;
@@ -40,53 +38,38 @@ body::before {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.res-link:hover {
-    outline: #E5FEFF solid 1px;
-    outline-offset: -0.5rem;
-    /* padding: 1px 3px 1px 3px; */
+section {
+    width: 100%;
 }
 
-.header-bg-box {
-    background-image: url('../images/header.jpg');
-    width: auto, 0;
-    min-height: 20rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* END Global Selectors */
+
+/* START navbar selectors/classes */
+
+.navBgColor {
+    background: #000324;
+}
+
+.nav-link {
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
 }
 
-.header-box {
-    display: flex;
-    justify-content: center;
-    min-width: 47rem;
-    height: auto, 0;
-    background-color: #000324c8;
-    margin: 7rem;
-}
-
-.header-box-items {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-/* 
-nav {
+.nav {
     height: 7.5rem;
-} */
+}
 
 .logo-img {
     max-width: 9rem;
     height: auto;
 }
 
-.resBtn {
-    /* margin-bottom: 6px; */
+.res-link:hover {
+    outline: #E5FEFF solid 1px;
+    outline-offset: -0.5rem;
 }
 
-.toggle-button {
+/* .toggle-button {
     position: absolute;
     top: .75rem;
     right: 1rem;
@@ -102,26 +85,71 @@ nav {
     width: 100%;
     background-color: white;
     border-radius: 10px;
+} */
+
+.dropdown-item {
+    color: #E5FEFF;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
-.relaxedHam {
+/* I created 'invisible' <a> tags with their respective classes below that have the same height as the navbar so the navbar wont hide the top of the content, since the navbar is fixed. */
+a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c-anchor {
+    display: block;
+    position: relative;
+    top: -7.5rem;
+    visibility: hidden;
+}
+
+
+/* END navbar selectors/classes */
+
+/* START header selectors/classes */
+
+.header-bg-box {
+    background-image: url('../images/header.jpg');
+    width: auto, 0;
+    min-height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    object-fit: cover;
-    object-position: 70% 40%;}
-
-.card {
-    border-radius: 0;
-    border: none;
-    max-width: 19rem;
-    height: auto;
 }
 
-.card-img-top {
-    border-radius: 0;
+.sm-header-img {
+    min-width: 100%;
+    max-height: 31.25rem;
+}
+
+.sm-header {
+    width: 100%;
+}
+
+.header-box {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 47rem;
+    height: auto, 0;
+    background-color: #000324c8;
+    margin: 7rem;
+}
+
+.header-box-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* END header selectors/classes */
+
+/* START overview selectors/classes */
+.relaxedHam {
+    display: flex;
+    justify-content: end;
+    width: 23rem;
+    height: 26rem;
+    object-fit: cover;
 }
 
 .award-images-container {
@@ -150,18 +178,33 @@ nav {
     flex-wrap: wrap;
     min-height: 20rem;
     width: 100%;
+    gap: .5rem;
 }
 
 .ov-col-one {
-    min-height: 15rem;
-    width: 18rem;
+    display: flex;
+    justify-content: end;
 }
 
 .ov-col-two {
     display: grid;
     align-items: center;
-    min-height: 10rem;
-    width: 10rem, 0;
+    /* min-height: 10rem;
+    width: 10rem, 0; */
+}
+
+/* END overview selectors/classes */
+
+/* START rooms selectors/classes */
+.card {
+    border-radius: 0;
+    border: none;
+    max-width: 19rem;
+    height: auto;
+}
+
+.card-img-top {
+    border-radius: 0;
 }
 
 .room-bg {
@@ -176,12 +219,27 @@ nav {
 }
 
 .rooms-btn {
-    border-radius: 0px;
+    /* 
     max-width: 7rem;
     height: auto;
     background-color: #004CC7;
-    color: #E5FEFF;
+     */
+    background-color: #004CC7;
+    min-height: 3.125rem;
+    width: 9.375rem;
+    font-size: 20px;
+    border-radius: 0px;
+    color: white;
 }
+
+.rooms-cards {
+    max-width: 20rem;
+    height: auto, 0;
+}
+
+/* END rooms selectors/classes */
+
+/* START packages selectors/classes */
 
 .packages-img {
     width: 32.5rem;
@@ -192,15 +250,18 @@ nav {
     object-position: -1rem;
 }
 
-.rooms-cards {
-    max-width: 20rem;
-    height: auto, 0;
-}
-
 .package-price-text {
     color: #1F51A8;
 }
 
+.packages-btn {
+    background-color: #004CC7;
+    min-height: 2.375rem;
+    width: 11.8rem;
+    font-size: 20px;
+}
+
+/* START amenities selectors/packages */
 
 .amenities-bg {
     background-image: url('../images/bg.jpg');
@@ -220,9 +281,13 @@ nav {
 }
 
 .valet-icon {
-    width: auto;
-    height: 104px;
+    max-width: auto;
+    max-height: 104px;
 }
+
+/* END amenities selectors/classes */
+
+/* START reserve a room selectors/classes */
 
 .reserve-img {
     width: 71rem;
@@ -246,6 +311,7 @@ nav {
     min-height: 2.375rem;
     width: 11.8rem;
     font-size: 20px;
+    color: white;
 }
 
 .input-bx {
@@ -266,6 +332,10 @@ select {
     min-height: 2.375rem;
 }
 
+/* END reserve a room selectors/classes */
+
+/* START footer selectors/classes */
+
 footer {
     background-color: #000324;
     width: 100%;
@@ -276,25 +346,11 @@ footer {
     max-width: 8.9rem;
     max-height: auto;
 }
-/* I created 'invisible' a tags with their respective classes below that have the same height as the navbar so the navbar wont hide the top of the content, since the navbar is fixed. */
-a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c-anchor {
-    display: block;
-    position: relative;
-    top: -7.5rem;
-    visibility: hidden;
-}
 
-/* .main-reserve-bx {
-    padding-left: 13rem;
-    padding-bottom: 4rem;
-} */
-
-/* .input-container {
-    width: 71rem;
-    gap: 1rem;
-} */
-
+/* END footer selectors/classes */
 /* END custom selectors */
+
+/* Media queries */
 
 @media (max-width: 540px) {
     .toggle-button {
@@ -304,4 +360,38 @@ a.ov-anchor, a.h-anchor, a.rms-anchor, a.p-anchor, a.a-anchor, a.res-anchor, a.c
     .nav-link {
         display: none;
     }
+    
+    .hide-lg-nav {
+        display: none;
+    }
+
+    body::before {
+        display: inline;
+        content: '';
+        height: 7.5rem;
+    }
 }
+
+@media (max-width: 768px) {
+    body::before {
+        display: inline;
+        content: '';
+        height: 7.5rem;
+    }
+}
+
+/* @media (max-width: 551px) {
+    .dropdown-toggle {
+        display: none;
+    }
+} */
+
+/* REFERENCES */
+
+/* $container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+); */
